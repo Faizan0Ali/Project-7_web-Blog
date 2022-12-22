@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "84b83b5c-8e69-4a63-b63d-185bdb0b6efc",
+		"name": "assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21272719"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"name\": \"syed faizan ali\",\r\n      \"phone\":\"5555555556\",\r\n      \"email\":\"kp@gmail.com\",\r\n      \"password\":\"Krupaaa1\"\r\n\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/getPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getPost",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2EzZGVjYjU1YzEyOTAxY2UzNTFkYmIiLCJjb21wYW55IjoiRmVibyIsIm9yZ2FuaXNhdGlvbiI6ImZlYm9PcmciLCJpYXQiOjE2NzE2ODM3OTksImV4cCI6MTY3MTc3MDE5OX0.yNhNqoWUna22_cyQ6XopK8oEdIjXuuxcIynJ5zEKilc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "posttt",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "hello this is first post ever",
+							"type": "text"
+						},
+						{
+							"key": "createdBy",
+							"value": "63a3decb55c12901ce351dbb",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "22.05728",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "82.17095",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/createPost",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kp@gmail.com\",\r\n    \"password\":\"Krupaaa1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/post/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2EzZGVjYjU1YzEyOTAxY2UzNTFkYmIiLCJjb21wYW55IjoiRmVibyIsIm9yZ2FuaXNhdGlvbiI6ImZlYm9PcmciLCJpYXQiOjE2NzE2ODM3OTksImV4cCI6MTY3MTc3MDE5OX0.yNhNqoWUna22_cyQ6XopK8oEdIjXuuxcIynJ5zEKilc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"postaa\",\r\n    \"body\": \"hello this is 4th post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update/63a333cbc8df6ff55f64a7e1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update",
+						"63a333cbc8df6ff55f64a7e1"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "post1",
+							"disabled": true
+						},
+						{
+							"key": "body",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "isActive",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/delete/63a3e081c33a40410b8b8ff9",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2EzZGVjYjU1YzEyOTAxY2UzNTFkYmIiLCJjb21wYW55IjoiRmVibyIsIm9yZ2FuaXNhdGlvbiI6ImZlYm9PcmciLCJpYXQiOjE2NzE2ODM3OTksImV4cCI6MTY3MTc3MDE5OX0.yNhNqoWUna22_cyQ6XopK8oEdIjXuuxcIynJ5zEKilc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delete/63a3e081c33a40410b8b8ff9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete",
+						"63a3e081c33a40410b8b8ff9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/getIsActive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getIsActive",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getIsActive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/getLongitudeAndLatitude?longitude=22.05728&latitude=22.05728",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getLongitudeAndLatitude?longitude=22.05728&latitude=22.05728",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getLongitudeAndLatitude"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "22.05728"
+						},
+						{
+							"key": "latitude",
+							"value": "22.05728"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
